@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+// Features section
+// Features section
+// Features section
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
 
