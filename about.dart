@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-
-
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
 
@@ -12,6 +10,19 @@ class AboutPage extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         backgroundColor: const Color(0xEDEFF3FF),
+        appBar: AppBar(
+          backgroundColor: const Color(0xFFB5BEE0),
+          elevation: 0,
+          centerTitle: true,
+          title: const Text(
+            'عن التطبيق',
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+        ),
         body: SafeArea(
           child: SingleChildScrollView(
             padding: const EdgeInsets.all(20),
@@ -32,26 +43,11 @@ class AboutPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child: Stack(
-                    children: [
-                      Align(
-                        alignment: Alignment.center,
-                        child: const Image(
-                          image: AssetImage('assets/logo.png'),
-                          height: 100,
-                        ),
-                      ),
-                      Positioned(
-                        top: 0,
-                        left: 0, // Ensures it's on the top-left corner
-                        child: IconButton(
-                          icon: const Icon(Icons.arrow_back, color: Colors.white),
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                        ),
-                      ),
-                    ],
+                  child: const Center(
+                    child: Image(
+                      image: AssetImage('assets/logo.png'),
+                      height: 100,
+                    ),
                   ),
                 ),
 
@@ -192,7 +188,7 @@ class FeatureRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        FaIcon(icon, color: Colors.indigo), // FontAwesome icon
+        FaIcon(icon, color: Colors.indigo),
         const SizedBox(width: 10),
         Expanded(
           child: Text(
